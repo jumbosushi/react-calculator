@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  position: relative;
+
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #5cefff 0%, #a25129 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #d55b5b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.btn:hover {background-color: #bd5151}
+
+.btn:active {
+  background-color: #bd5151;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.App {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-column-gap: 5px;
+  grid-template-rows: 60px;
+  grid-template-areas:
+    "result  result  result  result"
+    "numbers numbers numbers equations"
+    "numbers numbers numbers equations"
+    "numbers numbers numbers equations"
+    "numbers numbers numbers equations"
+    ".       .       .       equations";
+}
+
+.result {
+  background-color: white;
+  text-align: right;
+  grid-area: result;
+}
+
+.numbers {
+  grid-area: numbers;
+}
+
+.equations {
+  grid-area: equations;
+}
+
+/* equations */
+
+.btn-equation-+ {
+  grid-area: plus
+}
+.btn-equation-- {
+  grid-area: minus
+}
+.btn-equation-* {
+  grid-area: multiply
+}
+.btn-equation-/ {
+  grid-area: divide
+}
+
+.btn-equation-= {
+  grid-area: equal
+}
+.btn-equation-container {
+  display: grid;
+  grid-template-columns: 80px;
+  grid-column-gap: 5px;
+  grid-row-gap: 15px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "plus"
+    "minus"
+    "multiply"
+    "divide"
+    "equal";
+}
+
+/* Numbers */
+
+.btn-number-0 {
+  width: 100%;
+  grid-area: btn-number-0;
+}
+
+.btn-number-1 {
+  grid-area: btn-number-1;
+}
+
+.btn-number-2 {
+  grid-area: btn-number-2;
+}
+
+.btn-number-3 {
+  grid-area: btn-number-3;
+}
+
+.btn-number-4 {
+  grid-area: btn-number-4;
+}
+
+.btn-number-5 {
+  grid-area: btn-number-5;
+}
+
+.btn-number-6 {
+  grid-area: btn-number-6;
+}
+
+.btn-number-7 {
+  grid-area: btn-number-7;
+}
+
+.btn-number-8 {
+  grid-area: btn-number-8;
+}
+
+.btn-number-9 {
+  grid-area: btn-number-9;
+}
+
+.btn-number-container {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 15px;
+  grid-template-areas:
+    "btn-number-1 btn-number-2 btn-number-3"
+    "btn-number-4 btn-number-5 btn-number-6"
+    "btn-number-7 btn-number-8 btn-number-9"
+    "btn-number-0 btn-number-0 btn-number-0";
+}
